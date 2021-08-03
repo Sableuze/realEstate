@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Real Estate</title>
+    <meta charset="UTF-8">
+    <meta content="telephone=no" name="format-detection">
+
+    <link href="css/style.min.css" rel="stylesheet">
+
+    <meta name="theme-color" content="#317EFB"/>
+    <meta name="description" content="Real estate shop">
+
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.3/css/all.css">
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__content ">
+            <div class="header__menu menu navbar navbar-expand-lg">
+                <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                        class="navbar-toggler bg-light navbar-light" data-bs-target="#navbarSupportedContent"
+                        data-bs-toggle="collapse" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="menu__body  collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="logo"><img src="img/icons/logo.svg" width="128" height="34" alt="logo"/></div>
+                    <ul class="menu__list menu__middle">
+                        <li class="menu__item"><a class="menu__link" href="#">HOME</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">HOW WE DO IT</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">ABOUT US</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">SERVICES</a></li>
+                        <li class="menu__item"><a class="menu__link" href="#">CONTACT</a></li>
+                        <li class="menu__item">
+                            <a class="button btn-warning" href="#" role="button">Work with us <i
+                                    class="far fa-long-arrow-right"></i></a>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+            <section class="intro">
+                <div class="darken__bg"></div>
+                <div class="intro__container _container flex-cnt flex-column ">
+                    <div class="intro__content title-text-button">
+                        <h1 class="intro__title title">Beautiful homes made for you</h1>
+                        <p class="intro__text text">In oculis quidem se esse admonere interesse enim maxime placeat,
+                            facere possimus, omnis. Et quidem faciunt, ut labore et accurate disserendum et harum
+                            quidem exercitus quid.</p>
+                    </div>
+                    <div class="intro__bottom">
+                        <a href="#" class="intro__link">See all listings <i class="far fa-long-arrow-right"></i></a>
+                    </div>
+                </div>
+
+
+            </section>
+        </div>
+
+    </header>
+    <main class="page">
+        <section class="safety ">
+            <div class="safety__container _extended_container flex-cnt ">
+                <div class="safety__img left"><img srcset="img/safety/1png.webp 992w" src="img/safety/01.webp"
+                                                   alt="conference"/></div>
+                <div class="safety__content title-text-button"><h2 class="safety__title title">You’re in good hands</h2>
+                    <p class="safety__text text">Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne
+                        ferae quidem se repellere, idque instituit docere sic: omne animal, simul atque integre
+                        iudicante itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
+                        accusantium doloremque.</p><a class="button btn-dark" href="#" role="button">Work with us <i
+                            class="far fa-long-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="find ">
+            <div class="find__container _container flex-cnt flex-column">
+
+                <div class="find__title title">Find your next place to live</div>
+
+                <ul class="find__filters" id="filters">
+                    <li class="find__option">
+                        <select name="aim" id="aim">
+                            <option value="">Looking for</option>
+                            <option value="Flat">Flat</option>
+                            <option value="Apartment">Apartment</option>
+                            <option value="Condo">Condo</option>
+
+                        </select>
+                    </li>
+
+                    <li class="find__option">
+                        <select name="location" id="location">
+                            <option value="">Location</option>
+                            <option value="New York">New York</option>
+                            <option value="California">California</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Arizona">Arizona</option>
+                        </select></li>
+                    <li class="find__option"><select name="type" id="type">
+                        <option value="">Property Type</option>
+                        <option value="Residential">Residential</option>
+                        <option value="Commercial">Commercial</option>
+                        <option value="Land">Land</option>
+                    </select></li>
+                    <li class="find__option">
+                        <div class="price">
+                            <input class="input-text" placeholder="min" type="text" value="" id="price-min">
+
+                            <input class="input-text" placeholder="max" type="text" value="" id="price-max">
+
+                        </div>
+                    </li>
+                </ul>
+
+
+                <div class="find__items" id="houses">
+                    <div class="single-house"></div>
+                </div>
+                <div class="button btn-warning" id="loadMore">Load More</a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section class="safety ">
+            <div class="safety__container _extended_container flex-cnt ">
+                <div class="safety__content title-text-button"><h2 class="safety__title title">You’re in good hands</h2>
+                    <p class="safety__text text">Torquatos nostros? quos dolores eos, qui dolorem ipsum per se texit, ne
+                        ferae quidem se repellere, idque instituit docere sic: omne animal, simul atque integre
+                        iudicante itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
+                        accusantium doloremque.</p>
+                    <a class="button btn-dark" href="#" role="button">Work with us <i
+                            class="far fa-long-arrow-right"></i></a>
+                </div>
+                <div class="safety__img right"><img srcset="img/safety/1png.webp 992w" src="img/safety/01.webp"
+                                                    alt="conference"/></div>
+
+            </div>
+        </section>
+
+
+        <section class="text__section ">
+            <div class="text__section__container _container">
+                <div class="text__section__content flex-cnt flex-column"><h2 class="text__section__title title">You’re
+                    in good hands</h2>
+                    <p class="text__section__text text">Torquatos nostros? quos dolores eos, qui dolorem ipsum per se
+                        texit, ne ferae quidem se repellere, idque instituit docere sic: omne animal, simul atque
+                        integre iudicante itaque aiunt hanc quasi involuta aperiri, altera occulta quaedam et voluptatem
+                        accusantium doloremque.</p>
+                    <a href="#" class="button btn-warning">Learn more <i class="far fa-long-arrow-right"></i></a></div>
+            </div>
+        </section>
+
+        <section class="clients__say">
+            <div class="clients__say__container _container">
+
+                <div class="feedback__items">
+                    <div class="feedback__item _hidden" data-tab-content
+                         id="tab-1">"Nunc vitae neque faucibus, aliquam sapien sed, facilisis orci. Ut vel risus metus.
+                        Vestibulum elit elit, pretium vel consequat tincidunt, tristique vitae felis. Ut et justo est.
+                        Fusce ut euismod diam. Aliquam erat volutpat. Sed feugiat leo sapien, ac fermentum libero
+                        gravida at. Ut sit amet aliquam tellus. In nec justo mi."
+                    </div>
+                    <div class="feedback__item" data-tab-content
+                         id="tab-2">"Praesent vitae tortor metus. Vestibulum eget venenatis mauris, ut ultricies eros.
+                        Aenean id faucibus velit, ut tincidunt quam. Proin eu velit lorem. In ac ipsum et massa iaculis
+                        vehicula ac eu urna. Quisque laoreet libero eu erat porttitor, at consectetur urna tincidunt.
+                        Morbi quis odio libero. Mauris odio ante, cursus at volutpat quis, fermentum eget urna."
+                    </div>
+                    <div class="feedback__item _hidden" data-tab-content
+                         id="tab-3">"Suspendisse ut nisl enim. Class aptent taciti sociosqu ad litora torquent per
+                        conubia nostra, per inceptos himenaeos. Etiam quis vestibulum nisl. Donec id tristique dui. Duis
+                        nec metus mauris. Nullam id ante lobortis, maximu"
+                    </div>
+                    <div class="feedback__item _hidden" data-tab-content
+                         id="tab-4">“Proin eleifend ligula sed venenatis maximus. Nam et orci nec tortor facilisis
+                        luctus eget non lacus. Morbi non ultrices nulla. Nullam sodales vulputate mauris, sit amet
+                        maximus turpis iaculis et. Sed posuere, metus et faucibus auctor, velit arcu scelerisque leo,
+                        pulvinar posuere augue nibh vel libero. Sed non pretium nunc. Integer sagittis ultricies ex,
+                        ullamcorper gravida eros tincidunt non..”
+                    </div>
+                    <div class="feedback__item _hidden" data-tab-content
+                         id="tab-5">“Vivamus in nunc finibus sapien posuere condimentum. Curabitur feugiat metus eget
+                        dui sollicitudin, eget gravida tellus bibendum. Sed eu mi id nunc iaculis blandit non vel urna.
+                        Nulla iaculis nisi finibus leo dictum, ut iaculis lectus placerat. Ut ut fermentum lacus, et
+                        pharetra arcu. Mauris a viverra libero. Vivamus commodo, justo quis tristique luctus.”
+                    </div>
+                    <div class="feedback__item _hidden" data-tab-content
+                         id="tab-6">“Morbi quis consequat turpis. Donec a justo id mi pulvinar varius eget ut felis.
+                        Suspendisse potenti. Praesent tincidunt rutrum felis, et ullamcorper sapien tempus ac. Aenean
+                        sit amet ipsum vitae leo scelerisque pretium. Aliquam consequat nibh vitae enim ornare
+                        sodales.s.”
+                    </div>
+                </div>
+                <div class="clients">
+                    <div class="owl-carousel owl-theme owl-loaded">
+                        <div class="owl-stage-outer">
+                            <div class="owl-stage">
+                                <div class="owl-item">
+                                    <div class="client d-flex" data-tab="tab-1">
+                                        <div class="client__img"><img src="img/icons/client.webp" width="49" height="49"
+                                                                      alt="client">
+                                        </div>
+                                        <div class="clients__description">
+                                            <div class="client__name">Lara Madrigal</div>
+                                            <div class="client__role text-sm">Client</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="owl-item">
+                                    <div class="client d-flex _active" data-tab="tab-2">
+                                        <div class="client__img"><img src="img/icons/client.webp" width="49" height="49"
+                                                                      alt="client">
+                                        </div>
+                                        <div class="clients__description">
+                                            <div class="client__name">Aristotle</div>
+                                            <div class="client__role text-sm">Client</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="client d-flex" data-tab="tab-3">
+                                        <div class="client__img"><img src="img/icons/client.webp" width="49" height="49"
+                                                                      alt="client">
+                                        </div>
+                                        <div class="clients__description">
+                                            <div class="client__name">Mary Anning</div>
+                                            <div class="client__role text-sm">Client</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="client d-flex" data-tab="tab-4">
+                                        <div class="client__img"><img src="img/icons/client.webp" width="49" height="49"
+                                                                      alt="client">
+                                        </div>
+                                        <div class="clients__description">
+                                            <div class="client__name">Anaximander</div>
+                                            <div class="client__role text-sm">Client</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="client d-flex" data-tab="tab-5">
+                                        <div class="client__img"><img src="img/icons/client.webp" width="49" height="49"
+                                                                      alt="client">
+                                        </div>
+                                        <div class="clients__description">
+                                            <div class="client__name">André-Marie Ampère</div>
+                                            <div class="client__role text-sm">Client</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="owl-item">
+                                    <div class="client d-flex" data-tab="tab-6">
+                                        <div class="client__img"><img src="img/icons/client.webp" width="49" height="49"
+                                                                      alt="client">
+                                        </div>
+                                        <div class="clients__description">
+                                            <div class="client__name">Luis Alvarez</div>
+                                            <div class="client__role text-sm">Client</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__container _container">
+            <div class="footer__header">
+                <div class="footer__title subtitle">Make your dreams a <i class="orange">reality</i></div>
+                <a href="#" class="button btn-warning">Work with us <i class="far fa-long-arrow-right"></i></a>
+            </div>
+            <div class="footer__links ">
+                <div class="links__col social__media">
+
+                    <div class="logo"><img alt="footer logo" src="img/icons/logo.svg" width="128" height="34"></div>
+                    <ul class="socials">
+                        <li><a class="socials__item" href="#"><p style="display:none">Facebook icon</p> <i class="fab fa-facebook-f"></i></a></li>
+                        <li><a class="socials__item" href="#"><p style="display:none">Youtube icon</p><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="socials__item" href="#"><p style="display:none">Linkedin icon</p><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a class="socials__item" href="#"><p style="display:none">Instagram icon</p><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="links__col company">
+                    <div class="links__title">Column Heading</div>
+                    <ul class="links__menu company__menu">
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+
+                    </ul>
+                </div>
+                <div class="links__col explore">
+                    <div class="links__title">Column Heading</div>
+                    <ul class="links__menu explore__menu">
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+
+                    </ul>
+                </div>
+                <div class="links__col terms">
+                    <div class="links__title">Column Heading</div>
+                    <ul class="links__menu terms__menu">
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+                        <li><a class="links__link" href="#">Link goes here</a></li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+
+</div>
+
+<script crossorigin="anonymous"
+        integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+        src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/libs/smoothScroll.js"></script>
+<script src="js/app.js"></script>
+
+
+<!--<script src="js/files/forms.js"></script>-->
+<!--<script src="js/files/functions.js"></script>-->
+<!--<script src="js/files/regular.js"></script>-->
+<!--<script src="js/files/script.js"></script>-->
+<!--<script src="js/files/scroll.js"></script>-->
+<!--<script src="js/files/sliders.js"></script>-->
+<script src="js/customScripts.js"></script>
+
+<!--	boostrap-->
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
