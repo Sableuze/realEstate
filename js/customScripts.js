@@ -319,12 +319,12 @@ $('.owl-carousel').owlCarousel({
     responsive: {
         0: {
             items: 1,
-            nav: true,
+
 
         },
         550: {
             items: 2,
-            nav: true,
+
         },
         1000: {
             items: 3
@@ -336,6 +336,8 @@ $('.owl-carousel').owlCarousel({
 const filters = document.querySelector('#filters');
 const dropdownElem = document.querySelectorAll('.select__option')
 const priceInputs = document.querySelectorAll('.input-text')
+let hidden = null
+
 
 
 dropdownElem.forEach(function (item) {
@@ -388,8 +390,9 @@ function outputGoods(goods) {
         </div>
     </div>
   `).join('');
+
     if (!goods.length) {
-        document.getElementById('houses').innerHTML = "<p class='empty__warning title-sm'>Unfortunately, there is no suitable option for you. <br> Try choosing other parameters</p>"
+        $(document.querySelector('.empty__warning')).show()
 
     }
 
@@ -406,11 +409,43 @@ function outputGoods(goods) {
     }
     x = quantityItems
     $('#houses > div:lt(' + x + ')').show();
+    loadMoreCheck()
+
+
+
+
 
     $('#loadMore').click(function () {
         x = (x + quantityToAdd <= size_li) ? x + quantityToAdd : size_li;
         $('#houses > div:lt(' + x + ')').show();
+
+        loadMoreCheck()
     });
+}
+function loadMoreCheck() {
+    let itemsAll = document.querySelectorAll(".find__items > .single-house")
+    let loadButton = document.getElementById('loadMore')
+    let itemsHidden = 0
+    let itemsShown = 0
+
+    itemsAll.forEach(function (item){
+        if ($(item).is(":visible")) {
+            itemsShown+= 1
+        }
+        else {
+            itemsHidden += 1
+        }
+    })
+
+    if (itemsHidden === 0) {
+        $(loadButton).hide()
+        hidden = true
+
+    }
+    else if (itemsHidden > 0 && hidden) {
+        $(loadButton).show()
+        hidden = false
+    }
 }
 
 const DATA = [
