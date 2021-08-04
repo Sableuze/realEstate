@@ -51,54 +51,53 @@ const actionEvent = window.screen.width >= 550
 const owlStage = document.querySelector(".owl-stage")
 
 labelCondition.forEach(function (item) {
-    if (actionEvent == true) {
-        item.addEventListener("click", function () {
-            labelCondition.forEach(function (removeClass) {
-                removeClass.classList.remove("_active");
-            })
+        if (actionEvent == true) {
+            item.addEventListener("click", function () {
+                labelCondition.forEach(function (removeClass) {
+                    removeClass.classList.remove("_active");
+                })
 
-            this.classList.toggle("_active");
-            contentBoxes.forEach(function (item) {
-                item.classList.add("_hidden")
-            })
+                this.classList.toggle("_active");
+                contentBoxes.forEach(function (item) {
+                    item.classList.add("_hidden")
+                })
 
-            let contentBox = document.querySelector("#" + this.dataset.tab);
-            contentBox.classList.remove("_hidden")
-
-            if (this.parentNode.classList.contains("active")) {
+                let contentBox = document.querySelector("#" + this.dataset.tab);
                 contentBox.classList.remove("_hidden")
-            }
 
-        })
-    }
-    else {
-        $('.owl-carousel').on('translated.owl.carousel', function () {
+                if (this.parentNode.classList.contains("active")) {
+                    contentBox.classList.remove("_hidden")
+                }
 
-            labelCondition.forEach(function (removeClass) {
-                removeClass.classList.remove("_active");
             })
-            contentBoxes.forEach(function (item) {
-                item.classList.add("_hidden")
+        } else {
+            $('.owl-carousel').on('translated.owl.carousel', function () {
+
+                labelCondition.forEach(function (removeClass) {
+                    removeClass.classList.remove("_active");
+                })
+                contentBoxes.forEach(function (item) {
+                    item.classList.add("_hidden")
+                })
+                //
+                // let parentSwiper = this.parentNode
+                // console.log(parentSwiper)
+                // if (parentSwiper.classList.contains("active")) {
+                //     this.classList.add("_active")
+                // }
+                let owl_item = owlStage.querySelector(".active")
+
+                let owl_child = owl_item.querySelector(".client")
+
+                owl_child.classList.add("_active")
+
+                let contentBox = document.querySelector("#" + owl_child.dataset.tab);
+                contentBox.classList.remove("_hidden")
+
             })
-            //
-            // let parentSwiper = this.parentNode
-            // console.log(parentSwiper)
-            // if (parentSwiper.classList.contains("active")) {
-            //     this.classList.add("_active")
-            // }
-            let owl_item = owlStage.querySelector(".active")
-
-            let owl_child = owl_item.querySelector(".client")
-
-            owl_child.classList.add("_active")
-
-            let contentBox = document.querySelector("#" + owl_child.dataset.tab);
-            contentBox.classList.remove("_hidden")
-
-        })
 
         }
-}
+    }
 )
 ;
 //
@@ -279,33 +278,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Detect wrap
 
-let container = document.querySelectorAll('.wrappable');
+// let container = document.querySelectorAll('.wrappable');
 
 
-function detectWrap(node) {
-    node.forEach(container => {
-        Array.from(container.children).forEach(child => {
-            const containerPos = container.getBoundingClientRect().top;
-            const childPos = child.getBoundingClientRect().top;
-            if (childPos > containerPos) {
-                child.classList.add('wrapped');
-                container.classList.add("wrapOn")
-            } else {
-                child.classList.remove('wrapped');
-                container.classList.remove("wrapOn")
-
-            }
-        });
-    });
-}
-
-window.addEventListener("DOMContentLoaded", (e) => {
-    detectWrap(container);
-});
-
-window.addEventListener("resize", (e) => {
-    detectWrap(container);
-});
+// function detectWrap(node) {
+//     node.forEach(container => {
+//         Array.from(container.children).forEach(child => {
+//             const containerPos = container.getBoundingClientRect().top;
+//             const childPos = child.getBoundingClientRect().top;
+//             if (childPos > containerPos) {
+//                 child.classList.add('wrapped');
+//                 container.classList.add("wrapOn")
+//             } else {
+//                 child.classList.remove('wrapped');
+//                 container.classList.remove("wrapOn")
+//
+//             }
+//         });
+//     });
+// }
+//
+// window.addEventListener("DOMContentLoaded", (e) => {
+//     detectWrap(container);
+// });
+//
+// window.addEventListener("resize", (e) => {
+//     detectWrap(container);
+// });
 
 $(document).ready(function () {
     $(".owl-carousel").owlCarousel();
@@ -337,7 +336,6 @@ const filters = document.querySelector('#filters');
 const dropdownElem = document.querySelectorAll('.select__option')
 const priceInputs = document.querySelectorAll('.input-text')
 let hidden = null
-
 
 
 dropdownElem.forEach(function (item) {
@@ -386,6 +384,7 @@ function outputGoods(goods) {
             <p class="house__description-back text">Type of property: ${n.typeMain}</p>
             <p class="house__description-back text">Type: ${n.type}</p>
             <p class="house__description-back text">Price: ${n.price}$ per night</p>
+            <a href="#" class="button btn-warning">RENT THIS HOUSE</a>
 
         </div>
     </div>
@@ -413,8 +412,6 @@ function outputGoods(goods) {
 
 
 
-
-
     $('#loadMore').click(function () {
         x = (x + quantityToAdd <= size_li) ? x + quantityToAdd : size_li;
         $('#houses > div:lt(' + x + ')').show();
@@ -422,17 +419,17 @@ function outputGoods(goods) {
         loadMoreCheck()
     });
 }
+
 function loadMoreCheck() {
     let itemsAll = document.querySelectorAll(".find__items > .single-house")
     let loadButton = document.getElementById('loadMore')
     let itemsHidden = 0
     let itemsShown = 0
 
-    itemsAll.forEach(function (item){
+    itemsAll.forEach(function (item) {
         if ($(item).is(":visible")) {
-            itemsShown+= 1
-        }
-        else {
+            itemsShown += 1
+        } else {
             itemsHidden += 1
         }
     })
@@ -441,8 +438,7 @@ function loadMoreCheck() {
         $(loadButton).hide()
         hidden = true
 
-    }
-    else if (itemsHidden > 0 && hidden) {
+    } else if (itemsHidden > 0 && hidden) {
         $(loadButton).show()
         hidden = false
     }
@@ -608,6 +604,9 @@ const DATA = [
 ];
 
 outputGoods(DATA);
+
+
+
 
 
 
