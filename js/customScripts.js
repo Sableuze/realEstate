@@ -394,6 +394,9 @@ function outputGoods(goods) {
         $(document.querySelector('.empty__warning')).show()
 
     }
+    else {
+        $(document.querySelector('.empty__warning')).hide()
+    }
 
     size_li = $("#houses > div").length;
     let quantityItems = 0
